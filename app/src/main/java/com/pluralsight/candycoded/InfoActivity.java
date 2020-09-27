@@ -9,6 +9,8 @@ import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
 
+import java.net.URI;
+
 public class InfoActivity extends AppCompatActivity {
 
     @Override
@@ -33,10 +35,16 @@ public class InfoActivity extends AppCompatActivity {
         }
     }
 
-    // ***
-    // TODO - Task 2 - Launch the Google Maps Activity
-    // ***
+    public void createPhoneIntent(View view){
+//        Intent callIntent = new Intent(Intent.ACTION_DIAL);
+//        callIntent.setData(Uri.parse("tel:" + "tel:0123456789"));
+//        startActivity(callIntent);
 
+        Intent callIntent = new Intent(Intent.ACTION_DIAL);
+        Uri called_uri_parse = Uri.parse("tel:0123456789");
+        callIntent.setData(called_uri_parse);
+        startActivity(callIntent);
+    }
     // ***
     // TODO - Task 3 - Launch the Phone Activity
     // ***
