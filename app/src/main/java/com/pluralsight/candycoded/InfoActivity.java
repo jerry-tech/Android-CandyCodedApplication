@@ -45,7 +45,6 @@ public class InfoActivity extends AppCompatActivity {
         callIntent.setData(called_uri_parse);
         startActivity(callIntent);
     }
-    // ***
-    // TODO - Task 3 - Launch the Phone Activity
-    // ***
+
+
 }
